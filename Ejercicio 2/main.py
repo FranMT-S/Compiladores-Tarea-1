@@ -9,13 +9,13 @@ if __name__ == '__main__':
     
     converter = None
     # coloquen sus opciones para pruebas
-    data = "00111000"
+    data = "001110002"
     InputType = "hexadecimal"
     OutputType = "binary"
 
     # Convertir texto a minuscula por si acaso
     InputType = InputType.lower()
-    OutputType = OutputType.lower()
+    #OutputType = OutputType.lower()
 
     # Converter Factory Method
     GetConverter = dict([(BINARY, BinaryConverter),
