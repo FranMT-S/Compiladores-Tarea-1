@@ -1,7 +1,7 @@
+from src.core import *
+
 
 
 if __name__ == '__main__':
     
-    print("test")
-   
- 
+    pass
