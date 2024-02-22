@@ -9,19 +9,19 @@ if __name__ == '__main__':
     
     converter = None
     # coloquen sus opciones para pruebas
-    data = "00111000"
-    InputType = "hexadecimal"
-    OutputType = "binary"
+    data = "5"
+    InputType = "octal"
+    OutputType = "hexadecimal"
 
     # Convertir texto a minuscula por si acaso
     InputType = InputType.lower()
-    OutputType = OutputType.lower()
+    #OutputType = OutputType.lower()
 
     # Converter Factory Method
     GetConverter = dict([(BINARY, BinaryConverter),
-                              (OCTAL, OctalConverter),
-                              (DECIMAL, DecimalConverter),
-                              (HEXADECIMAL,HexadecimalConverter)
+                            (OCTAL, OctalConverter),
+                            (DECIMAL, DecimalConverter),
+                            (HEXADECIMAL,HexadecimalConverter)
                         ])
 
     # instanciar
