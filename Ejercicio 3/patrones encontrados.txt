@@ -1,0 +1,4 @@
+Numeros: ['123123123', '123123', '333']
+Numeros Y Letras: ['123123123asdfasdf', '333kkkUUU']
+Tres Vocales: ['eee', 'ooo', 'UUU']
+Caracteres Especiales: No se encontraron coincidencias

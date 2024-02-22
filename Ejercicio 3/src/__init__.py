@@ -1,1 +1,2 @@
-# from .core import *
+from .gui.gui import *
+from .core import *
