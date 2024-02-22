@@ -13,14 +13,17 @@ class BinaryConverter(IConverter):
     
 
     def ToOctal(self,number) -> str:
-        if(not self.IsValid(number)):
-            return "no es valido"
+        while len(number) % 3 != 0:
+            number = '0' + number  
         
-        oct_num = ""
-        for i in range(len(number) // 3):
-            triad = number[3*i:3*(i+1)]
-            oct_num += str(int(triad, 2))
-        return oct_num
+        binary_group = [number[i:i+3] for i in range(0, len(number), 3)]
+
+    
+        octal = ''
+        for group in binary_group:
+            octal += str(int(group, 2))
+        
+        return octal
         
 
     def ToDecimal(self,number) -> str:
@@ -37,11 +40,16 @@ class BinaryConverter(IConverter):
         if(not self.IsValid(number)):
             return "no es valido"
         
-        hex_num = ""
-        for i in range(len(number) // 4):
-            nibble = number[4*i:4*(i+1)]
-            hex_num += str(int(nibble, 2))
-        return hex_num
+        while len(number) % 4 != 0:
+            number = '0' + number  
+        
+        binary_groups = [number[i:i+4] for i in range(0, len(number), 4)]
+
+        hexadecimal = ''
+        for group in binary_groups:
+            hexadecimal += format(int(group, 2), 'X') 
+        
+        return hexadecimal
     
 
     def IsValid(self,number) -> bool:
